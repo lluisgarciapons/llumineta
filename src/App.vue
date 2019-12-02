@@ -1,32 +1,32 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <Toolbar />
+    <v-content id="scrolling-techniques-5">
+      <Llumineta />
+    </v-content>
+  </v-app>
 </template>
 
+<script>
+import Llumineta from "./views/Llumineta";
+import Toolbar from "./components/Toolbar";
+
+export default {
+  name: "App",
+
+  components: {
+    Llumineta,
+    Toolbar
+  },
+
+  data: () => ({
+    //
+  })
+};
+</script>
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+#scrolling-techniques-5 {
+  max-height: 100vh;
+  overflow-y: auto;
 }
 </style>
