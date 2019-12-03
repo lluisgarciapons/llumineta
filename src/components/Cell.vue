@@ -14,6 +14,7 @@
         max-width="344"
         outlined
         :dark="cell.full"
+        height="190"
       >
         <v-list-item three-line>
           <v-list-item-content>
